@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+  
+<body>
+    <form id="registerForm">
+        <label for="username">Username:</label>
+        <input type="text" id="regUsername" name="username" required>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="Password" name="password" required>
+        <br>
+
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required>
+        <br>
+
+        <input type="submit" value="Register">
+    </form>
+<br>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            const username = document.getElementById('regUsername').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('Password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            if (username === "" || email === "" || password === "" || confirmPassword === "") {
+                alert("");
+                event.preventDefault();
+            } else if (password !== confirmPassword) {
+                // alert("Passwords do not match!");
+                event.preventDefault();
+            }
+        });
+    </script>
+
+
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
